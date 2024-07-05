@@ -7,6 +7,7 @@ import { Sidebar } from "@/components/layout/sidebar";
 import { useSidebarToggle } from "@/hooks/use-sidebar-toggle";
 import { Navbar } from "./navbar";
 import Image from "next/image";
+import CardWrapper from "./components/card-wrapper";
 
 export default function DashboardLayout({
   children,
@@ -25,10 +26,10 @@ export default function DashboardLayout({
           <Sidebar />
           <main
             className={cn(
-              "w-full bg-transparent transition-[margin-left] ease-in-out duration-300"
+              "w-full bg-transparent transition-[margin-left] ease-in-out duration-300 px-6"
             )}
           >
-            {children}
+            <CardWrapper variant="glass">{children}</CardWrapper>
           </main>
         </div>
         {/* <footer

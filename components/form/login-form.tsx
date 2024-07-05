@@ -30,6 +30,7 @@ import { Separator } from "@/components/ui/separator";
 import TextSeperator from "../ui/text-seperator";
 import { cn } from "@/lib/utils";
 import BrandButtons from "./brand-buttons";
+import CardWrapper from "../layout/components/card-wrapper";
 
 const formSchema = z.object({
   email: z.string().email("Invalid email").min(2, {
@@ -59,7 +60,7 @@ const LoginForm = () => {
         onSubmit={form.handleSubmit(onSubmit)}
         className="w-[90vw] sm:w-[60vw] md:w-[40vw] lg:w-[30vw]"
       >
-        <Card className=" bg-white/10 backdrop-blur-lg drop-shadow-md rounded-3xl border border-white/20 overflow-y-auto">
+        <CardWrapper variant={"glass"}>
           <CardHeader>
             <CardTitle className="text-2xl">Sign In</CardTitle>
             <CardDescription>Card Description</CardDescription>
@@ -114,7 +115,7 @@ const LoginForm = () => {
               Submit
             </Button>
           </CardFooter>
-        </Card>
+        </CardWrapper>
       </form>
     </Form>
   );

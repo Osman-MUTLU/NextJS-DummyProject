@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Menu } from "@/components/layout/components/menu";
 import { useSidebarToggle } from "@/hooks/use-sidebar-toggle";
 import { SidebarToggle } from "@/components/layout/sidebar-toggle";
+import CardWrapper from "./components/card-wrapper";
 
 export function Sidebar() {
   const sidebar = useStore(useSidebarToggle, (state) => state);
@@ -14,14 +15,16 @@ export function Sidebar() {
   if (!sidebar) return null;
 
   return (
+    
     <aside
       className={cn(
-        "glass-card hidden lg:block sticky top-20 left-5 z-20 -translate-x-full lg:translate-x-0 transition-[width] ease-in-out duration-300",
+        "hidden lg:block sticky top-20 left-5 z-20 -translate-x-full lg:translate-x-0 transition-[width] ease-in-out duration-300",
         sidebar?.isOpen === false ? "w-[90px]" : "w-64"
       )}
     >
       <SidebarToggle isOpen={sidebar?.isOpen} setIsOpen={sidebar?.setIsOpen} />
-      <div className="flex flex-col px-3 py-4 overflow-y-auto">
+      <CardWrapper variant={"glass"}>
+      <div className="flex flex-col px-3 py-4">
         {/* <Button
           className={cn(
             "transition-transform ease-in-out duration-300 mb-1",
@@ -46,6 +49,8 @@ export function Sidebar() {
         </Button> */}
         <Menu isOpen={sidebar?.isOpen} />
       </div>
+      </CardWrapper>
     </aside>
+    
   );
 }

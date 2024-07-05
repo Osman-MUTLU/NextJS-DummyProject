@@ -8,7 +8,10 @@ interface AuthLayoutProps {
 
 export default function AuthLayout({ children }: AuthLayoutProps) {
   return (
-    <main className="h-[100vh] w-full flex justify-center items-center">
+    <main
+      className={cn(
+        "h-[100vh] w-full flex justify-center items-center"
+      )}>
       <div className="container flex h-screen w-screen flex-col items-center justify-center">
         {/* Go BACK Navigation Button */}
         <Link
