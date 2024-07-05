@@ -21,9 +21,7 @@ export default function AuthLayout({ children }: AuthLayoutProps) {
           Back
         </Link>
         {/* Form Card */}
-        <div className="bg-white/25 backdrop-blur-lg drop-shadow-md rounded-3xl border border-white/20 px-12 py-16 flex max-h-[80vh] max-w-lg w-full sm:w-fit flex-col justify-center items-center overflow-y-auto">
-          {children}
-        </div>
+        <div className="">{children}</div>
         <div className="absolute bottom-0 pb-4 px-4 flex gap-2 text-sm sm:text-base font-medium text-white">
           <Link
             href="#"
