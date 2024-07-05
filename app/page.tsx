@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { PanelsTopLeft } from "lucide-react";
@@ -47,11 +49,9 @@ export default function Home() {
               shadcn/ui complete with desktop and mobile responsiveness.
             </span>
             <div className="flex w-full items-center justify-center space-x-4 py-4 md:pb-6">
-              <Button variant="default" asChild>
-                <Link href="/sign-in">
-                  Sign In
-                  <ArrowRightIcon className="ml-2" />
-                </Link>
+              <Button variant="default" onClick={() => signIn()}>
+                Sign In
+                <ArrowRightIcon className="ml-2" />
               </Button>
               <Button variant="outline" asChild>
                 <Link href="/dashboard" rel="noopener noreferrer">

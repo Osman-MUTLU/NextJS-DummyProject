@@ -1,9 +1,12 @@
+"use client";
+
 import React from "react";
 import { Button, buttonVariants } from "../ui/button";
 import { cn } from "@/lib/utils";
 
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
+import { signIn } from "next-auth/react";
 
 const BrandButtons = () => {
   return (
@@ -13,6 +16,8 @@ const BrandButtons = () => {
           buttonVariants({ variant: "secondary" }),
           "w-full color-primary gap-2"
         )}
+        onClick={() => signIn("google")}
+        type="button"
       >
         <FcGoogle />
         Google

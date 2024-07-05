@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 
 import PlaceholderContent from "@/components/demo/placeholder-content";
@@ -10,8 +12,11 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+import { useSession } from "next-auth/react";
 
 export default function DashboardPage() {
+  const { data } = useSession();
+
   return (
     <ContentLayout title="Dashboard">
       {/* <Breadcrumb>
