@@ -31,6 +31,7 @@ import TextSeperator from "../ui/text-seperator";
 import { cn } from "@/lib/utils";
 import BrandButtons from "./brand-buttons";
 import CardWrapper from "../layout/components/card-wrapper";
+import Link from "next/link";
 
 const formSchema = z.object({
   email: z.string().email("Invalid email").min(2, {
@@ -63,7 +64,9 @@ const LoginForm = () => {
         <CardWrapper variant={"glass"}>
           <CardHeader>
             <CardTitle className="text-2xl">Sign In</CardTitle>
-            <CardDescription>Card Description</CardDescription>
+            <CardDescription>
+              Please sign in to continue to your account.
+            </CardDescription>
           </CardHeader>
           <CardContent className="space-y-3">
             <BrandButtons />
@@ -77,7 +80,7 @@ const LoginForm = () => {
                   <FormControl>
                     <Input
                       className="bg-secondary dark:bg-secondary/20 w-full"
-                      placeholder="shadcn"
+                      placeholder="user@example.com"
                       {...field}
                     />
                   </FormControl>
@@ -95,7 +98,7 @@ const LoginForm = () => {
                     <Input
                       className="bg-secondary dark:bg-secondary/20 w-full"
                       type="password"
-                      placeholder="shadcn"
+                      placeholder="********"
                       {...field}
                     />
                   </FormControl>
@@ -105,6 +108,21 @@ const LoginForm = () => {
             />
           </CardContent>
           <CardFooter>
+            <div className="flex flex-col w-full space-y-4">
+            <div className="flex justify-between items-center px-2">
+              <div className="flex items-center">
+                <input
+                  type="checkbox"
+                  className="rounded-sm border border-gray-300 dark:border-gray-700"
+                />
+                <FormDescription className="ml-2">Remember me</FormDescription>
+              </div>
+              <Button variant={"link"} className="text-xs color-secondary" type="button">
+                <Link href="/forgot-password">
+                  <div className="text-primary">Forgot password?</div>
+                </Link>
+              </Button>
+            </div>
             <Button
               className={cn(
                 buttonVariants({ variant: "secondary" }),
@@ -114,6 +132,7 @@ const LoginForm = () => {
             >
               Submit
             </Button>
+            </div>
           </CardFooter>
         </CardWrapper>
       </form>
