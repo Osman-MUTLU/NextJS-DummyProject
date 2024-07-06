@@ -27,6 +27,8 @@ const BrandButtons = () => {
           buttonVariants({ variant: "secondary" }),
           "w-full gap-2"
         )}
+        onClick={() => signIn("github")}
+        type="button"
       >
         <FaGithub />
         Github
