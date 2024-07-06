@@ -21,7 +21,7 @@ export default function DashboardLayout({
   return (
     <>
       <div className="h-[100vh] overflow-hidden">
-        <Navbar title="Deneme" />
+        <Navbar title="Dummy Project" />
         <div className="flex h-[90vh]">
           <Sidebar />
           <main

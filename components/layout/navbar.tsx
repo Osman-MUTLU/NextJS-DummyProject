@@ -8,7 +8,6 @@ interface NavbarProps {
 
 export function Navbar({ title }: NavbarProps) {
   return (
-    // bg-background/95 shadow backdrop-blur supports-[backdrop-filter]:bg-background/60 dark:shadow-secondary
     <header className="sticky top-0 z-10 w-full">
       <div className="mx-4 sm:mx-8 flex h-14 items-center">
         <div className="flex items-center space-x-4 lg:space-x-0">
