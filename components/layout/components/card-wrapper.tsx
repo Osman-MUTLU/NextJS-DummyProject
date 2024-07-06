@@ -10,7 +10,7 @@ const cardWrapperVariants = cva(
         variants: {
             variant: {
                 glass:
-                    " dark:border-white/20 dark:bg-white/10 dark:border-white/20",
+                    "border-primary/20 bg-secondary/10 border-primary/20 dark:border-white/20 dark:bg-white/10 dark:border-white/20",
             }
         },
         defaultVariants: {

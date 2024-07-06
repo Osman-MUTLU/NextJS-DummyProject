@@ -14,7 +14,7 @@ const BrandButtons = () => {
       <Button
         className={cn(
           buttonVariants({ variant: "secondary" }),
-          "w-full color-primary gap-2"
+          "w-full gap-2"
         )}
         onClick={() => signIn("google")}
         type="button"
@@ -25,7 +25,7 @@ const BrandButtons = () => {
       <Button
         className={cn(
           buttonVariants({ variant: "secondary" }),
-          "w-full color-primary gap-2"
+          "w-full gap-2"
         )}
       >
         <FaGithub />

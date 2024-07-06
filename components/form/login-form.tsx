@@ -76,7 +76,7 @@ const LoginForm = () => {
                   <FormLabel>Email</FormLabel>
                   <FormControl>
                     <Input
-                      className="bg-white/10 border border-white/20 w-full"
+                      className="bg-secondary dark:bg-secondary/20 w-full"
                       placeholder="shadcn"
                       {...field}
                     />
@@ -93,7 +93,7 @@ const LoginForm = () => {
                   <FormLabel>Password</FormLabel>
                   <FormControl>
                     <Input
-                      className="bg-white/10 border border-white/20 w-full"
+                      className="bg-secondary dark:bg-secondary/20 w-full"
                       type="password"
                       placeholder="shadcn"
                       {...field}
@@ -108,7 +108,7 @@ const LoginForm = () => {
             <Button
               className={cn(
                 buttonVariants({ variant: "secondary" }),
-                "w-full color-primary"
+                "w-full "
               )}
               type="submit"
             >
